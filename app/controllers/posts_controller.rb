@@ -15,4 +15,9 @@ class PostsController < ApplicationController
       render :new
     end
   end
+  
+  private
+  def post_params
+    params.require(:post).permit(:title, :overview, :use_tech, :portfolio_url, :github_url)
+  end
 end
