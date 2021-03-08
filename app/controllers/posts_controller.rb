@@ -15,9 +15,9 @@ class PostsController < ApplicationController
       render :new
     end
   end
-  
+
   private
   def post_params
-    params.require(:post).permit(:title, :overview, :use_tech, :portfolio_url, :github_url)
+    params.require(:post).permit(:image, :title, :overview, :use_tech, :portfolio_url, :github_url).merge(user_id: current_user.id)
   end
 end
