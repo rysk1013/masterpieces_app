@@ -2,6 +2,7 @@
 .container {
   width: 1200px;
   margin: 0 auto;
+  padding: 20px;
   display: flex;
 }
 
@@ -43,6 +44,11 @@
 .user-name {
   font-size: 20px;
   line-height: 50px;
+}
+
+.overview-title {
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .post-overview {
@@ -100,4 +106,55 @@
 .form__btn:hover {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
   cursor: pointer;
+}
+
+/* -------------- posts/show -------------- */
+.post-show {
+  width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contents {
+  padding: 20px;
+  background-color: #ededed;
+}
+
+.show-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.overview-wrapper,
+.programminlanguages-wrapper,
+.techs-wrapper {
+  margin-bottom: 20px;
+}
+
+.overview-wrapper p,
+.programminlanguages-wrapper p,
+.techs-wrapper p {
+  border-bottom: 1px solid #333;
+  padding: 10px;
+}
+
+.likes-show {
+  text-align: left;
+  border-bottom: 1px solid #333;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-wrapper {
+  background-color: mediumspringgreen;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: auto;
+  border-radius: 5px;
+}
+
+.edit-btn {
+  display: block;
 }

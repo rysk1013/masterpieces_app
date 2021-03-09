@@ -1,0 +1,44 @@
+        <div class="post-show">
+          <div class="contents">
+            <%= image_tag 'sample.jpeg', class: 'post-img' %>
+            <h2 class="post-title">
+              タイトルタイトルタイトルタイトル
+            </h2>
+            <div class="icon-box">
+              <%= image_tag 'sample1.jpeg', class: 'icon-pic'%>
+              <h3 class="user-name">ユーザー１</h3>
+            </div>
+          
+            <div class="overview-wrapper">
+              <h3 class="show-title">・概要</h3>
+              <p class="show-text">
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              </p>
+            </div>
+
+            <div class="programminlanguages-wrapper">
+              <h3 class="show-title">・プログラミング言語</h3>
+              <p class="show-text">
+                HTML, CSS, Ruby, Ruby on Rails 
+              </p>
+            </div>
+
+            <div class="techs-wrapper">
+              <h3 class="show-title">・技術</h3>
+              <p class="show-text">
+                AWS, Docker, CircleCI
+              </p>
+            </div>
+
+            <div class="likes-show">
+              <a href="#" class="far fa-star"></a>
+              <span class="likes-count">2</span>
+            </div>
+
+            <div class="post-manage">
+              <div class="btn-wrapper">
+                <%= link_to "編集", edit_post_path(@post.id), class: "edit-btn"%>
+              </div>
+            </div>
+          </div>
+        </div>
