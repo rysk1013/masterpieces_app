@@ -1,7 +1,7 @@
         <div class="post">
-          <%= image_tag post.image, class: 'post-img' %>
+          <%= link_to image_tag(post.image, class: 'post-img'), post_path(post.id) %>
           <h2 class="post-title">
-            <%= post.title %>
+            <%= link_to post.title, post_path(post.id) %>
           </h2>
           <div class="icon-box">
             <%= image_tag 'sample1.jpeg', class: 'icon-pic'%>
