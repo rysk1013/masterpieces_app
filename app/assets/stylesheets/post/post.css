@@ -146,15 +146,25 @@
 }
 
 .btn-wrapper {
-  background-color: mediumspringgreen;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
   width: 100px;
   height: 30px;
   text-align: center;
   line-height: 30px;
-  margin-left: auto;
   border-radius: 5px;
 }
 
 .edit-btn {
+  background-color: mediumspringgreen;
+  display: block;
+  margin-right: 10px;
+}
+
+.destroy-btn {
+  background-color: tomato;
   display: block;
 }
