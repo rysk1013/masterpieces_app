@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_08_073721) do
+ActiveRecord::Schema.define(version: 2021_03_09_035323) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -36,12 +36,13 @@ ActiveRecord::Schema.define(version: 2021_03_08_073721) do
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
     t.text "overview", null: false
-    t.text "use_tech", null: false
     t.string "portfolio_url", null: false
     t.string "github_url", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "programming_languages"
+    t.text "techs"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
