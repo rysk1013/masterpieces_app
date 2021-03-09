@@ -72,6 +72,10 @@
   margin: 30px auto;
 }
 
+.page-heading {
+  font-size: 50px;
+}
+
 .form__text {
   width: 100%;
   margin-top: 5px;
