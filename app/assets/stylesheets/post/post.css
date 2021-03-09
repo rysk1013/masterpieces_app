@@ -9,12 +9,11 @@
 .left-container {
   width: 900px;
   padding: 20px;
-  background-color: tomato;
 }
 
 .post {
   padding: 20px;
-  background-color: deepskyblue;
+  background-color: #ededed;
 }
 
 .post:not(:last-of-type) {
