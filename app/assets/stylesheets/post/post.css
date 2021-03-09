@@ -74,6 +74,7 @@
 
 .page-heading {
   font-size: 50px;
+  margin-bottom: 30px;
 }
 
 .form__text {
@@ -113,6 +114,18 @@
 .form__btn:hover {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
   cursor: pointer;
+}
+
+.error-alert {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+
+.error-message {
+  font-size: 1.3vw;
+  list-style: circle;
+  color: rgb(182, 48, 0);
 }
 
 /* -------------- posts/show -------------- */
