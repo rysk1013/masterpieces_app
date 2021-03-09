@@ -49,11 +49,13 @@
               <span class="likes-count">2</span>
             </div>
 
-            <div class="post-manage">
-              <div class="btn-wrapper">
-                <%= link_to "編集", edit_post_path(@post.id), class: "btn edit-btn"%>
-                <%= link_to "削除", post_path(@post.id), method: :delete, class: "btn destroy-btn"%>
+            <% if user_signed_in? && current_user.id == @post.user_id %>
+              <div class="post-manage">
+                <div class="btn-wrapper">
+                  <%= link_to "編集", edit_post_path(@post.id), class: "btn edit-btn"%>
+                  <%= link_to "削除", post_path(@post.id), method: :delete, class: "btn destroy-btn"%>
+                </div>
               </div>
-            </div>
+            <% end %>
           </div>
         </div>
