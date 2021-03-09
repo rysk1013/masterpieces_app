@@ -41,8 +41,8 @@ ActiveRecord::Schema.define(version: 2021_03_09_035323) do
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.text "programming_languages"
-    t.text "techs"
+    t.text "programming_languages", null: false
+    t.text "techs", null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
