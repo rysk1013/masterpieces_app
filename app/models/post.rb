@@ -5,7 +5,8 @@ class Post < ApplicationRecord
     validates :image
     validates :title
     validates :overview
-    validates :use_tech
+    validates :programming_languages
+    validates :techs
     validates :portfolio_url
     validates :github_url
   end
