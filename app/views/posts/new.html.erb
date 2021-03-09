@@ -14,15 +14,6 @@
         </div>
 
         <div class="field">
-          <%= f.label :portfolio_url, "ポートフォリオのURL" %><br />
-          <%= f.text_field :portfolio_url, class: 'input-default' %>
-        </div>
-
-        <div class="field">
-          <%= f.label :github_url, "GitHubのURL" %><br />
-          <%= f.text_field :github_url, class: 'input-default' %>
-        </div>
-        <div class="field">
           <%= f.label :overview, "概要" %><br />
           <%= f.text_area :overview, class: :form__text %>
         </div>
@@ -35,6 +26,16 @@
         <div class="field">
           <%= f.label :techs, "技術" %><br />
           <%= f.text_area :techs, class: :form__text %>
+        </div>
+
+        <div class="field">
+          <%= f.label :portfolio_url, "ポートフォリオのURL" %><br />
+          <%= f.text_field :portfolio_url, class: 'input-default' %>
+        </div>
+
+        <div class="field">
+          <%= f.label :github_url, "GitHubのURL" %><br />
+          <%= f.text_field :github_url, class: 'input-default' %>
         </div>
 
         <div class="actions">
