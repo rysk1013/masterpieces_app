@@ -1,11 +1,13 @@
+/* -------------- ヘッダー -------------- */
 .header {
   background-color: #f1f8fe;
   padding: 20px 0;
 
 }
 .inner {
-  width: 1024px;
+  width: 1200px;
   margin: 0 auto;
+  padding: 0 20px 0 40px;
 }
 .nav {
   width: 100%;

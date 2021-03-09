@@ -1,0 +1,61 @@
+        <div class="post-show">
+          <div class="contents">
+            <%= image_tag @post.image, class: 'post-img' %>
+            <h2 class="post-title">
+              <%= @post.title %>
+            </h2>
+            <div class="icon-box">
+              <%= image_tag 'sample1.jpeg', class: 'icon-pic'%>
+              <h3 class="user-name"><%= @post.user.nickname %></h3>
+            </div>
+          
+            <div class="overview-wrapper">
+              <h3 class="show-title">・概要</h3>
+              <p class="show-text">
+                <%= simple_format @post.overview %>
+              </p>
+            </div>
+
+            <div class="programminlanguages-wrapper">
+              <h3 class="show-title">・プログラミング言語</h3>
+              <p class="show-text">
+                <%= simple_format @post.programming_languages %>
+              </p>
+            </div>
+
+            <div class="techs-wrapper">
+              <h3 class="show-title">・技術</h3>
+              <p class="show-text">
+                <%= simple_format @post.techs %>
+              </p>
+            </div>
+
+            <div class="url-wrapper">
+              <h3 class="show-title">・GitHub</h3>
+              <p class="show-text">
+                <%= link_to @post.github_url %>
+              </p>
+            </div>
+
+            <div class="url-wrapper">
+              <h3 class="show-title">・URL</h3>
+              <p class="show-text">
+              <%= link_to @post.portfolio_url %>
+              </p>
+            </div>
+
+            <div class="likes-show">
+              <a href="#" class="far fa-star"></a>
+              <span class="likes-count">2</span>
+            </div>
+
+            <% if user_signed_in? && current_user.id == @post.user_id %>
+              <div class="post-manage">
+                <div class="btn-wrapper">
+                  <%= link_to "編集", edit_post_path(@post.id), class: "btn edit-btn"%>
+                  <%= link_to "削除", post_path(@post.id), method: :delete, class: "btn destroy-btn"%>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
