@@ -7,13 +7,13 @@ class LikesController < ApplicationController
       render 'posts/show'
     else
       @like = Like.create(post_id: params[:post_id], ip: request.remote_ip)
-      redirect_to post_path(@post.id)
+      redirect_back(fallback_location: root_path)
     end
   end
 
   def destroy
     @already_like.destroy
-    redirect_to post_path(@post.id)
+    redirect_back(fallback_location: root_path)
   end
 
   private
