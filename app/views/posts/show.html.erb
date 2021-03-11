@@ -59,6 +59,7 @@
               </div>
             <% end %>
           </div>
+          
           <div class="comment-wrapper">
             <h3 class="show-title">コメント</h3>
             <ul class="comments-lists">
@@ -70,14 +71,16 @@
               <% end %>
             </ul>
 
-            <%= form_with model: [@post, @comment], local: true do |f|%>
-              <div class="field">
-                <%= f.label :text, "コメント記入", class: "show-title" %><br />
-                <%= f.text_area :text, class: :text %>
-              </div>
-              <div class="submit-btn">
-                <%= f.submit "送信する", class: :form__btn  %>
-              </div>
+            <% if user_signed_in? %>
+              <%= form_with model: [@post, @comment], local: true do |f|%>
+                <div class="field">
+                  <%= f.label :text, "コメント記入", class: "show-title" %><br />
+                  <%= f.text_area :text, class: :text %>
+                </div>
+                <div class="submit-btn">
+                  <%= f.submit "送信する", class: :form__btn  %>
+                </div>
+              <% end %>
             <% end %>
           </div>
         </div>
