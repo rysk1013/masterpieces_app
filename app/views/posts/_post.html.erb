@@ -13,8 +13,8 @@
     <%= post.overview %>
   </p>
   <div class="likes">
-    <% if post.likes.present? %>
-    <% already_like = Like.find_by(post_id: post.id, ip: request.remote_ip) %>
+    <% if Like.find_by(post_id: post.id, ip: request.remote_ip) %>
+      <% already_like = Like.find_by(post_id: post.id, ip: request.remote_ip) %>
       <%= link_to post_like_path(post.id, already_like.id), method: :delete do %>
         <span class="far fa-star"></span>
       <% end %>
