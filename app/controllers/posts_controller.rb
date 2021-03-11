@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   def index
     @posts = Post.includes(:user).order(created_at: :desc)
+    @likes = Like.includes(:post)
   end
 
   def new
@@ -19,8 +20,10 @@ class PostsController < ApplicationController
   end
 
   def show
+    @already_like = Like.find_by(post_id:params[:id], ip: request.remote_ip)
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
+    @likes = Like.includes(:user)
   end
 
   def edit

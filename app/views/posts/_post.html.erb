@@ -1,19 +1,29 @@
-        <div class="post">
-          <%= link_to image_tag(post.image, class: 'post-img'), post_path(post.id) %>
-          <h2 class="post-title">
-            <%= link_to post.title, post_path(post.id) %>
-          </h2>
-          <div class="icon-box">
-            <div class="icon"></div>
-            <%# image_tag 'sample1.jpeg', class: 'icon-pic'%>
-            <h3 class="user-name"><%= post.user.nickname %></h3>
-          </div>
-          <h3 class="overview-title">概要</h3>
-          <p class="post-overview">
-            <%= post.overview %>
-          </p>
-          <div class="likes">
-            <a href="#" class="far fa-star"></a>
-            <span class="likes-count">2</span>
-          </div>
-        </div>
+<div class="post">
+  <%= link_to image_tag(post.image, class: 'post-img'), post_path(post.id) %>
+  <h2 class="post-title">
+    <%= link_to post.title, post_path(post.id) %>
+  </h2>
+  <div class="icon-box">
+    <div class="icon"></div>
+    <%# image_tag 'sample1.jpeg', class: 'icon-pic'%>
+    <h3 class="user-name"><%= post.user.nickname %></h3>
+  </div>
+  <h3 class="overview-title">概要</h3>
+  <p class="post-overview">
+    <%= post.overview %>
+  </p>
+  <div class="likes">
+    <% if post.likes.present? %>
+    <% already_like = Like.find_by(post_id: post.id, ip: request.remote_ip) %>
+      <%= link_to post_like_path(post.id, already_like.id), method: :delete do %>
+        <span class="far fa-star"></span>
+      <% end %>
+    <% else %>
+      <%= link_to post_likes_path(post.id), method: :post do %>
+        <span class="far fa-star"></span>
+      <% end %>
+    <% end %>
+    <%# <span class="far fa-star"></span> %>
+    <span class="likes-count"><%= post.likes.count %></span>
+  </div>
+</div>
