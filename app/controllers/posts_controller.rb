@@ -4,7 +4,6 @@ class PostsController < ApplicationController
   def index
     @posts = Post.includes(:user).order(created_at: :desc)
     @likes = Like.includes(:post)
-    @like = Like.find_by(ip: request.remote_ip)
   end
 
   def new
