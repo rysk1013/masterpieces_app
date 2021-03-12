@@ -13,9 +13,10 @@
     <%= post.overview %>
   </p>
   <div class="likes">
-    <% if Like.find_by(post_id: post.id, ip: request.remote_ip) %>
-      <% already_like = Like.find_by(post_id: post.id, ip: request.remote_ip) %>
-      <%= link_to post_like_path(post.id, already_like.id), method: :delete do %>
+
+    <% if post.id == @like.post.id %>
+      <%# already_like = Like.find_by(post_id: post.id, ip: request.remote_ip) %>
+      <%= link_to post_like_path(post.id, @like.post.id), method: :delete do %>
         <span class="far fa-star"></span>
       <% end %>
     <% else %>
@@ -23,6 +24,7 @@
         <span class="far fa-star"></span>
       <% end %>
     <% end %>
+
     <%# <span class="far fa-star"></span> %>
     <span class="likes-count"><%= post.likes.count %></span>
   </div>
