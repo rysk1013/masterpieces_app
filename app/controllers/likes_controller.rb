@@ -4,6 +4,7 @@ class LikesController < ApplicationController
 
   def create
     if @already_like
+      @comments = @already_like.post.comments.includes(:user)
       render 'posts/show'
     else
       @like = Like.create(post_id: params[:post_id], ip: request.remote_ip)

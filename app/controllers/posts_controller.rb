@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.includes(:user).order(created_at: :desc)
     @likes = Like.includes(:post)
+    @like = Like.find_by(ip: request.remote_ip)
   end
 
   def new
@@ -20,9 +21,9 @@ class PostsController < ApplicationController
   end
 
   def show
-    @already_like = Like.find_by(post_id:params[:id], ip: request.remote_ip)
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
+    @already_like = Like.find_by(post_id:params[:id], ip: request.remote_ip)
     @likes = Like.includes(:user)
   end
 
