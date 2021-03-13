@@ -6,7 +6,7 @@
   <div class="icon-box">
     <div class="icon"></div>
     <%# image_tag 'sample1.jpeg', class: 'icon-pic'%>
-    <h3 class="user-name"><%= post.user.nickname %></h3>
+    <h3 class="user-name"><%= link_to post.user.nickname, user_path(post.user.id) %></h3>
   </div>
   <h3 class="overview-title">概要</h3>
   <p class="post-overview">

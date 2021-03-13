@@ -19,6 +19,10 @@
           </div>
             <div class="nav__right">
             <% if  user_signed_in? %>
+              <div class="current-user-name">
+                ログインユーザー：
+                <%= link_to current_user.nickname, user_path(current_user.id) %>
+              </div>
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout%>
               <%= link_to "投稿", new_post_path,class: :nav__btn%>
             <% else %>

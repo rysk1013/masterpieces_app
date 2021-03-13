@@ -18,7 +18,6 @@
 
 .user-show-name {
   display: flex;
-  width: 500px;
   font-size: 20px;
   padding: 20px;
   margin-bottom: 30px;
@@ -28,6 +27,11 @@
 .user-show-name h2 {
   margin-right: 100px;
   padding: 20px;
+}
+
+.user-show-btn {
+  padding: 20px;
+  margin-left: auto;
 }
 
 .prb {
