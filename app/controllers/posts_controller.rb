@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.includes(:user).order(created_at: :desc)
     @likes = Like.includes(:post)
+    @tag_list = Tag.includes(:post)
   end
 
   def new
@@ -26,6 +27,7 @@ class PostsController < ApplicationController
     @comments = @post.comments.includes(:user)
     @already_like = Like.find_by(post_id:params[:id], ip: request.remote_ip)
     @likes = Like.includes(:user)
+    @post_tags = @post.tags
   end
 
   def edit
