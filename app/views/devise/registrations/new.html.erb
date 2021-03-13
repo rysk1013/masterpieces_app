@@ -2,6 +2,9 @@
 <div class="registration-container">
   <div class="registration-wrapper">
     <h1 class="registration-title">新規登録</h1>
+
+    <%= render 'posts/error_messages', model: f.object %>
+
     <div class="form-group">
       <div class='form-text-wrap'>
         <label class="form-text">ニックネーム</label>
