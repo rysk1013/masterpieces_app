@@ -8,7 +8,7 @@
         <% if user_signed_in? && current_user.id == @user.id %>
           <div class="btn-wrapper user-show-btn">
             <%= link_to "編集", edit_user_registration_path, class: "btn edit-btn"%>
-            <%= link_to "削除", "#", method: :delete, class: "btn destroy-btn"%>
+            <%= link_to "削除", user_registration_path, method: :delete, class: "btn destroy-btn"%>
           </div>
         <% end %>
       </div>
