@@ -44,3 +44,7 @@
 .nav__logout:hover{
   opacity: 0.5;
 }
+
+.current-user-name {
+  display: inline-block;
+}
