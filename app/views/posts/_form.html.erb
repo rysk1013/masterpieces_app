@@ -37,6 +37,11 @@
     <%= f.text_field :github_url, class: 'input-default' %>
   </div>
 
+  <div class="field">
+    <%= f.label :tag_name, "タグ" %>
+    <%= f.text_field :tag_name, class: 'input-default' %>
+  </div>
+
   <div class="actions">
     <%= f.submit "保存する", class: :form__btn  %>
   </div>
