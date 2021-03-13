@@ -39,6 +39,10 @@
 
   <div class="field">
     <%= f.label :tag_name, "タグ" %>
+    <div class="tag-exp">
+      <p>半角スペースを入力することで複数のタグを付けることができます</p>
+      <p>例：HTML CSS Ruby RubyonRails</p>
+    </div>
     <%= f.text_field :tag_name, class: 'input-default' %>
   </div>
 
