@@ -92,7 +92,7 @@
       <%= form_with model: [@post, @comment], id: "form", local: true do |f|%>
         <div class="field">
           <%= f.label :text, "コメント記入", class: "show-title" %><br />
-          <%= f.text_area :text, class: :text %>
+          <%= f.text_area :text, class: :text, id: "content"  %>
         </div>
         <div class="submit-btn">
           <%= f.submit "送信する", class: :form__btn, id: "submit"  %>
