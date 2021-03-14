@@ -1,6 +1,15 @@
 <div class="post-show">
   <div class="contents">
     <%= image_tag @post.image, class: 'post-img' %>
+    
+    <div class="post-show-tags">
+      <% @post.tags.each do |list| %>
+        <span class="tag">
+          <%= link_to list.tag_name, tag_posts_path(list.id) %>
+        </span>
+      <% end %>
+    </div>
+  
     <h2 class="post-title">
       <%= @post.title %>
     </h2>
