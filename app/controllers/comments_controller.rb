@@ -2,13 +2,8 @@ class CommentsController < ApplicationController
   before_action :authenticate_user!
   def create
     @post = Post.find(params[:post_id])
-    @comment = @post.comments.new(comment_params)
-    if @comment.save
-      redirect_to post_path(@comment.post_id)
-    else
-      @comments = @post.comments.includes(:user)
-      render "posts/show"
-    end
+    @comment = @post.comments.create(comment_params)
+    render json: {comment: @comment, user: @comment.user}
   end
 
   private
