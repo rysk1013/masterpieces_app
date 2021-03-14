@@ -19,7 +19,9 @@ function comment() {
       const formText = document.getElementById("content");
       const HTML = `
         <li class="comments-list">
+          <a href="/users/${user.id}">
           ${user.nickname}: 
+          </a> 
           ${comment.text}
         </li>`;
       list.insertAdjacentHTML("beforebegin", HTML);

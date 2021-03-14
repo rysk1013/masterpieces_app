@@ -82,7 +82,7 @@
     <ul class="comments-lists">
       <% @comments.each do |comment| %>
         <li class="comments-list">
-          <%= link_to comment.user.nickname, class: :comment_user %>: 
+          <%= link_to comment.user.nickname, user_path(comment.user.id), class: :comment_user %>: 
           <%= comment.text %>
         </li>
       <% end %>
