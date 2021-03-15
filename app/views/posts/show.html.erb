@@ -54,7 +54,7 @@
       </p>
     </div>
 
-    <div class="likes-show">
+    <div class="likes">
       <% if @post.likes.present? %>
         <%= link_to post_like_path(@post.id, @already_like.id), method: :delete do %>
           <span class="far fa-star"></span>

@@ -205,11 +205,10 @@
   margin-bottom: 20px;
 }
 
-.likes-show {
+.likes {
   text-align: left;
   border-bottom: 1px solid #333;
   padding: 10px;
-  margin-bottom: 20px;
 }
 
 .btn-wrapper {
