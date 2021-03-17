@@ -26,8 +26,8 @@ class PostsController < ApplicationController
   def show
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
-    @already_like = Like.find_by(post_id:params[:id], ip: request.remote_ip)
-    @likes = Like.includes(:user)
+    @already_like = Like.find_by(post_id:params[:id], user_id: current_user.id)
+    @likes = Like.includes(:post)
     @post_tags = @post.tags
   end
 
