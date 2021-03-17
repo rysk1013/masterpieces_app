@@ -1,15 +1,11 @@
 class LikesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_post
   before_action :set_already_like
 
   def create
-    if @already_like
-      @comments = @already_like.post.comments.includes(:user)
-      render 'posts/show'
-    else
-      @like = Like.create(post_id: params[:post_id], ip: request.remote_ip)
+      @like = Like.create(post_id: params[:post_id], user_id: current_user.id)
       redirect_back(fallback_location: root_path)
-    end
   end
 
   def destroy
@@ -23,6 +19,6 @@ class LikesController < ApplicationController
   end
 
   def set_already_like
-    @already_like = Like.find_by(ip: request.remote_ip, post_id: params[:post_id])
+    @already_like = Like.find_by(post_id: params[:post_id], user_id: current_user.id)
   end
 end
