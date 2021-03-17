@@ -205,12 +205,6 @@
   margin-bottom: 20px;
 }
 
-.likes {
-  text-align: left;
-  border-bottom: 1px solid #333;
-  padding: 10px;
-}
-
 .btn-wrapper {
   display: flex;
   justify-content: flex-end;
@@ -233,6 +227,18 @@
 .destroy-btn {
   background-color: tomato;
   display: block;
+}
+
+/* -------------- いいねボタン -------------- */
+
+.likes {
+  text-align: left;
+  border-bottom: 1px solid #333;
+  padding: 10px;
+}
+
+.like {
+  color: yellow;
 }
 
 /* --------------コメント-------------- */
