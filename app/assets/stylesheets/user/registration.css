@@ -1,6 +1,5 @@
 .registration-container {
-  width: 100vw;
-  height: 100vh;
+  padding: 50px;
 }
 
 .registration-title {
@@ -11,9 +10,17 @@
   border-bottom: 1px solid #eee;
 }
 
-.registration-wrapper {
+.registration-wrapper,
+.login-wrapper {
   width: 50%;
+  padding-bottom: 30px;
   margin: 0 auto;
+  background-color: #ededed;
+  box-shadow: 4px 4px 6px;
+}
+
+.login-container {
+  padding: 30px;
 }
 
 /* --------------sign_up,login共通-------------- */
@@ -35,7 +42,7 @@
   height: 20%;
 }
 
-.form-text {
+.label-text {
   font-size: 14px;
   font-weight: bold;
 }
@@ -53,7 +60,7 @@
 }
 
 .info-text {
-  color: #888;
+  color: #333;
   font-size: 15px;
   margin-top: 3px;
 }
