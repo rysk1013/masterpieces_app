@@ -51,7 +51,7 @@ class PostsController < ApplicationController
   def search
     @tag_list = Tag.all
     @tag = Tag.find(params[:tag_id])
-    @posts = @tag.posts.all
+    @posts = @tag.posts.all.order(created_at: :desc)
   end
 
   private
