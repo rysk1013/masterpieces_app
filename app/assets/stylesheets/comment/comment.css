@@ -1,6 +1,7 @@
 .comment-wrapper {
   padding: 20px;
   background-color: antiquewhite;
+  box-shadow: 4px 4px 6px;
 }
 
 .comments-lists {

@@ -1,6 +1,9 @@
-.form__wrapper{
+.form-wrapper{
   width: 50%;
   margin: 30px auto;
+  padding: 10px;
+  background-color: #ededed;
+  box-shadow: 4px 4px 6px;
 }
 
 .page-heading {
@@ -8,7 +11,7 @@
   margin-bottom: 30px;
 }
 
-.form__text {
+.form-text {
   width: 100%;
   margin-top: 5px;
   height: 200px;

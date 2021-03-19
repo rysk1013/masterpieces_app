@@ -5,9 +5,16 @@
 }
 
 .contents {
-  padding: 20px;
-  background-color: #ededed;
+  padding: 10px;
   margin-bottom: 30px;
+  background-color: #ededed;
+  box-shadow: 4px 4px 6px;
+}
+
+.post-show-img {
+  width: 840px;
+  height: 400px;
+  margin-bottom: 20px;
 }
 
 .show-title {

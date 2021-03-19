@@ -1,3 +1,8 @@
+.main {
+  background-color: #eee;
+  height: 100%;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -13,7 +18,7 @@
 .post {
   padding: 10px;
   background-color: #ededed;
-  border: 1px solid #333;
+  box-shadow: 4px 4px 6px;
 }
 
 .post:not(:last-of-type) {
