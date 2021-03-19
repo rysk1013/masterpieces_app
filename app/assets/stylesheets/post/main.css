@@ -1,18 +1,19 @@
 .container {
   width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
   display: flex;
 }
 
 .left-container {
   width: 900px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .post {
-  padding: 20px;
+  padding: 10px;
   background-color: #ededed;
+  border: 1px solid #333;
 }
 
 .post:not(:last-of-type) {
@@ -20,7 +21,7 @@
 }
 
 .post-img {
-  width: 820px;
+  width: 850px;
   height: 400px;
   margin-bottom: 20px;
 }
