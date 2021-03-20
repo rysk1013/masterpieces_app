@@ -3,6 +3,7 @@
   padding: 10px;
   width: 100%;
   box-shadow: 4px 4px 6px;
+  transition: all 0.3s;
 }
 
 .tag-header {
@@ -19,12 +20,14 @@
 .tag {
   display: inline-block;
   border-radius: 5px;
+  box-shadow: 3px 3px 0 rgb(7, 144, 230);
   background-color: #87CEFA;
   padding: 0px 3px;
   margin: 5px;
   height: 30px;
   text-align: center;
   line-height: 30px;
+  transition: all 0.3s;
 }
 
 .tag a {

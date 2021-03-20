@@ -19,6 +19,7 @@
   padding: 10px;
   background-color: #ededed;
   box-shadow: 4px 4px 6px;
+  transition: all 0.3s;
 }
 
 .post:not(:last-of-type) {

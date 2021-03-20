@@ -37,7 +37,7 @@
   margin-bottom: 40px;
 }
 
-.form__btn {
+.form-btn {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
@@ -51,7 +51,7 @@
   transition: 0.2s ease;
 }
 
-.form__btn:hover {
+.form-btn:hover {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
   cursor: pointer;
 }
