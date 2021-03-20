@@ -18,7 +18,13 @@
         <div class="user-show-profile">
           <h2>自己紹介</h2>
           <div class="profile-body">
-            <%= @user.profile %>
+            <% if @user.profile.nil? %>
+              <p>よろしくお願いします。</p>
+            <% else %>
+              <p>
+                <%= @user.profile %>
+              </p>
+            <% end %>
           </div>
         </div>    
       </div>

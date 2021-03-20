@@ -12,7 +12,7 @@
 
       <div class="form-group">
         <div class='form-text-wrap'>
-          <label class="form-text">ニックネーム</label>
+          <label class="label-text">ニックネーム</label>
           <span class="indispensable">必須</span>
         </div>
         <%= f.text_field :nickname, class: "input-default", placeholder: "例）テストタロウ", maxlength: "40"%>
@@ -20,7 +20,7 @@
 
       <div class="form-group">
         <div class='form-text-wrap'>
-          <label class="form-text">メールアドレス</label>
+          <label class="label-text">メールアドレス</label>
           <span class="indispensable">必須</span>
         </div>
         <%= f.email_field :email, class: "input-default", placeholder: "PC・携帯どちらでも可" %>
@@ -28,14 +28,14 @@
 
       <div class="form-group">
         <div class='form-text-wrap'>
-          <label class="form-text">自己紹介</label>
+          <label class="label-text">自己紹介</label>
           <span class="dispensable">任意</span>
         </div>
         <%= f.text_area :profile, class: "profile", placeholder: "自己紹介を記入してください" %>
       </div>
 
       <div class='register-btn'>
-        <%= f.submit "会員登録" ,class:"register-red-btn" %>
+        <%= f.submit "更新する" ,class:"register-red-btn" %>
       </div>
     </div>
   </div>

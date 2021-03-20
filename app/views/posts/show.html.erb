@@ -5,6 +5,10 @@
     <%= image_tag @post.image, class: 'post-show-img' %>
     
     <div class="post-show-tags">
+      <div class="tag-header">
+        <span class="fas fa-tags"></span>
+        <h3 class="tag-title">タグ</h3>
+      </div>
       <% @post.tags.each do |list| %>
         <span class="tag">
           <%= link_to list.tag_name, tag_posts_path(list.id) %>
@@ -22,35 +26,35 @@
     </div>
   
     <div class="overview-wrapper">
-      <h3 class="show-title">・概要</h3>
+      <h3 class="show-title">&lt;概要&gt;</h3>
       <p class="show-text">
         <%= simple_format @post.overview %>
       </p>
     </div>
 
     <div class="programminlanguages-wrapper">
-      <h3 class="show-title">・プログラミング言語</h3>
+      <h3 class="show-title">&lt;プログラミング言語&gt;</h3>
       <p class="show-text">
         <%= simple_format @post.programming_languages %>
       </p>
     </div>
 
     <div class="techs-wrapper">
-      <h3 class="show-title">・技術</h3>
+      <h3 class="show-title">&lt;技術&gt;</h3>
       <p class="show-text">
         <%= simple_format @post.techs %>
       </p>
     </div>
 
     <div class="url-wrapper">
-      <h3 class="show-title">・GitHub</h3>
+      <h3 class="show-title">&lt;GitHub&gt;</h3>
       <p class="show-text">
         <%= link_to @post.github_url %>
       </p>
     </div>
 
     <div class="url-wrapper">
-      <h3 class="show-title">・URL</h3>
+      <h3 class="show-title">&lt;URL&gt;</h3>
       <p class="show-text">
       <%= link_to @post.portfolio_url %>
       </p>
