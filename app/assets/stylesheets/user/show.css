@@ -2,7 +2,12 @@
   width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: skyblue;
+  background-color: #ededed;
+  box-shadow: 4px 4px 6px;
+}
+
+.user-show {
+  padding: 30px;
 }
 
 .user-show-upper {
@@ -41,7 +46,6 @@
 .user-show-profile {
   font-size: 20px;
   padding: 20px;
-  border: 1px solid #333;
 }
 
 .user-show-profile h2 {
@@ -50,11 +54,15 @@
 
 .profile-body {
   padding: 20px;
+  border: 1px solid #333;
+  background-color: #fff;
 }
 
 .user-show-middle {
   background-color: darkgray;
   padding: 20px 20px 0 20px;
+  box-shadow: 4px 4px 6px;
+  transition: all 0.3s;
 }
 
 .posts,
@@ -70,6 +78,11 @@
   height: 366.66px;
   margin-bottom: 20px;
   background-color: mediumspringgreen;
+  transition: all 0.3s;
+}
+
+.content:hover {
+  opacity: 0.5;
 }
 
 .user-show-img {
