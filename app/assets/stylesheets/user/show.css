@@ -34,6 +34,12 @@
   justify-content: space-between;
 }
 
+.not-correct-user {
+  display: flex;
+  justify-content: space-between;
+  width: 57%;
+}
+
 .prb {
   padding: 20px;
   line-height: 75px;
