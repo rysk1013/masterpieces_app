@@ -20,8 +20,11 @@
   </h3>
 
   <div class="icon-box">
-    <div class="icon"></div>
-    <%# image_tag 'sample1.jpeg', class: 'icon-pic'%>
+    <% if post.user.image.present? %>
+      <%= link_to image_tag(post.user.image, class: 'icon-pic'), user_path(post.user.id) %>
+    <% else %>
+      <%= image_tag "default_icon.png", class: "icon-pic" %>
+    <% end %>
     <h3 class="user-name"><%= link_to post.user.nickname, user_path(post.user.id) %></h3>
   </div>
 

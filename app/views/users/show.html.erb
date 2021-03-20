@@ -5,9 +5,11 @@
     <div class="user-show-wrapper">
       <div class="user-show-upper">
         <h1 class="user-show-heading">プロフィール</h1>
-        <div class="user-show-name">
-          <h2>ユーザー</h2>
+        <div class="user-show-name name-img-box">
           <div class="prb"><%= @user.nickname %></div>
+          <div class="profile-img-box">
+            <%= image_tag @user.image, class: "profile-img"%>
+          </div>
           <% if user_signed_in? && current_user.id == @user.id %>
             <div class="btn-wrapper user-show-btn">
               <%= link_to "編集", edit_user_registration_path, class: "btn edit-btn"%>
@@ -52,7 +54,7 @@
         <div class="favos">
           <div class="content">
             <%# image_tag 'sample2.jpeg', class: 'user-show-img' %>
-            <div class="user-show-img"></div>
+            <div class="user-like-img"></div>
             <h3>タイトル</h3>
           </div>
         </div>

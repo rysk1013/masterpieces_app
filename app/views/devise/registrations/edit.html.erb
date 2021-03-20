@@ -12,6 +12,14 @@
 
       <div class="form-group">
         <div class='form-text-wrap'>
+          <label name="image" class="label-text label-color">プロフィール画像</label>
+          <span class="dispensable">任意</span>
+        </div>
+        <%= f.file_field :image, class: "input-default" %>
+      </div>
+
+      <div class="form-group">
+        <div class='form-text-wrap'>
           <label class="label-text">ニックネーム</label>
           <span class="indispensable">必須</span>
         </div>
