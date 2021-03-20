@@ -12,6 +12,10 @@
               <div class="profile-img-box">
                 <%= image_tag @user.image, class: "profile-img"%>
               </div>
+            <% else %>
+              <div class="profile-img-box">
+                <%= image_tag "/default_icon.png", class: "profile-img" %>
+              </div>
             <% end %>
           </div>
           <% if user_signed_in? && current_user.id == @user.id %>
