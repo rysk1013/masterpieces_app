@@ -19,6 +19,7 @@
     <h2 class="post-title">
       <%= @post.title %>
     </h2>
+    
     <div class="icon-box">
       <% if @post.user.image.present? %>
        <%= link_to image_tag(@post.user.image, class: 'icon-pic'), user_path(@post.user.id) %>

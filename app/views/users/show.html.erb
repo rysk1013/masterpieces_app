@@ -8,6 +8,7 @@
         <div class="user-show-name name-img-box">
           <div class="not-correct-user">
             <div class="prb"><%= @user.nickname %></div>
+
             <% if @user.image.present? %>
               <div class="profile-img-box">
                 <%= image_tag @user.image, class: "profile-img"%>
@@ -17,6 +18,7 @@
                 <%= image_tag "/default_icon.png", class: "profile-img" %>
               </div>
             <% end %>
+            
           </div>
           <% if user_signed_in? && current_user.id == @user.id %>
             <div class="btn-wrapper user-show-btn">
