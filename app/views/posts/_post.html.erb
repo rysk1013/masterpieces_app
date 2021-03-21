@@ -19,15 +19,6 @@
     <%= link_to post.title, post_path(post.id) %>
   </h3>
 
-  <div class="icon-box">
-    <% if post.user.image.nil? %>
-      <%= image_tag "/default_icon.png", class: "icon-pic" %>
-    <% else %>
-      <%= link_to image_tag(post.user.image, class: 'icon-pic'), user_path(post.user.id) %>
-    <% end %>
-    <h3 class="user-name"><%= link_to post.user.nickname, user_path(post.user.id) %></h3>
-  </div>
-
   <h3 class="overview-title">&lt;概要&gt;</h3>
   <p class="post-overview">
     <%= post.overview %>
