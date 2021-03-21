@@ -9,13 +9,13 @@
           <div class="not-correct-user">
             <div class="prb"><%= @user.nickname %></div>
 
-            <% if @user.image.present? %>
+            <% if @user.image.nil? %>
               <div class="profile-img-box">
-                <%= image_tag @user.image, class: "profile-img"%>
+                <%= image_tag "/default_icon.png", class: "profile-img" %>
               </div>
             <% else %>
               <div class="profile-img-box">
-                <%= image_tag "/default_icon.png", class: "profile-img" %>
+                <%= image_tag @user.image, class: "profile-img"%>
               </div>
             <% end %>
             
