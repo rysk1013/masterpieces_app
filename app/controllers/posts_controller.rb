@@ -70,7 +70,7 @@ class PostsController < ApplicationController
 
   def access_restriction
     if current_user.id != @post.user_id
-      redirect_to action: :index 
+      redirect_to root_path 
     end
   end
 end
